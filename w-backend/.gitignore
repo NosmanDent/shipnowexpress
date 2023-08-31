@@ -1,0 +1,12 @@
+# .gitignore in the root directory
+
+# Ignore in the frontend (tracking-id) folder
+
+tracking-id/.env
+
+
+# Ignore node_modules in the root directory (backend )
+node_modules
+
+.env
+
