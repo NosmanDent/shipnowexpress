@@ -3,7 +3,6 @@ import axios from "axios";
 
 const LocationComponent = () => {
   const [location, setLocation] = useState(null);
-  const [preferredCountry, setPreferredCountry] = useState("");
 
   useEffect(() => {
     // Get user's location using Geolocation API

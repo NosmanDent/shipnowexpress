@@ -150,7 +150,7 @@ const CreateTracking = () => {
     setTimeout(async () => {
       try {
         const response = await axios.post(
-          "http://localhost:4000/api/trackings",
+          "https://shipnowexpress.onrender.com/api/trackings",
           formData
         );
         console.log("New tracking entry created:", response.data);

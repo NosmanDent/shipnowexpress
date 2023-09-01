@@ -24,7 +24,9 @@ const TrackingPage = () => {
 
     // Make the API request using Axios
     axios
-      .get(`http://localhost:4000/api/trackings/tracking/${searchQuery}`)
+      .get(
+        `https://shipnowexpress.onrender.com/api/trackings/tracking/${searchQuery}`
+      )
       .then((response) => {
         // Navigate to the search results page with the fetched data
         navigate(`/search-results`, { state: { results: response.data } });
