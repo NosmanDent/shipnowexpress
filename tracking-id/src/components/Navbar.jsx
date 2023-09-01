@@ -30,6 +30,10 @@ const Navbar = () => {
     setIsDropdownOpenShip(!isDropdownOpenShip);
   };
 
+  const handleNavLinkClick = () => {
+    setIsDropdownOpenShip(false); // Close the menu when NavLink is clicked
+  };
+
   const handleInputChange = (event) => {
     setSearchQuery(event.target.value);
   };
@@ -66,13 +70,13 @@ const Navbar = () => {
     <nav>
       <section className="bg-[#FDA50F] w-full px-5 md:px-12 py-4 relative">
         <div className="hidden md:flex flex-row items-center justify-between">
-          <Link
+          <NavLink
             to="/"
             className="flex flex-col items-end tracking-tighter leading-tight"
           >
             <h1 className="font-extrabold text-2xl text-black">shipNow</h1>
             <p className="text-[#D21502] font-bold text-md">Espress</p>
-          </Link>
+          </NavLink>
           <div>
             <div className="flex flex-row items-center gap-4 ">
               <div
@@ -116,7 +120,7 @@ const Navbar = () => {
                     className="bg-[#D21502] text-white py-3 lg:px-16 w-full md:w-1/4"
                     onClick={handleSearch}
                   >
-                    Search
+                    Track
                   </button>
                 </div>
                 {errorMessage && (
@@ -144,7 +148,11 @@ const Navbar = () => {
                 <h1 className=" text-2xl lg:text-3xl font-extrabold text-[#D21502] border-b pb-4">
                   START SHIPPING
                 </h1>
-                <div className="shadow-sm shadow-black rounded-lg py-6 px-2 w-full flex flex-row items-center justify-between ">
+                <NavLink
+                  onClick={handleNavLinkClick}
+                  to="/create"
+                  className="shadow-sm shadow-black rounded-lg py-6 px-2 w-full flex flex-row items-center justify-between "
+                >
                   <div className="flex flex-row items-center gap-2">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -178,9 +186,10 @@ const Navbar = () => {
                       d="M8.25 4.5l7.5 7.5-7.5 7.5"
                     />
                   </svg>
-                </div>
+                </NavLink>
                 <div className="shadow-sm shadow-black rounded-lg py-6 px-2 w-full flex flex-row items-center justify-between ">
-                  <Link
+                  <NavLink
+                    onClick={handleNavLinkClick}
                     to="/create"
                     className="flex flex-row items-center gap-2"
                   >
@@ -200,7 +209,7 @@ const Navbar = () => {
                     </svg>
 
                     <h1 className="font-bold">Ship Now</h1>
-                  </Link>
+                  </NavLink>
 
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

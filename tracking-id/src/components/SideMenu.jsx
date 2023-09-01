@@ -1,18 +1,59 @@
 import React, { useState, useEffect } from "react";
 import { BiLockOpenAlt, BiSolidLockAlt } from "react-icons/bi";
 import Accordion from "./Accordion";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { supabase } from "../supabaseClient";
-import TrackingPage from "./TrackingPage";
 import LocationComponent from "./LocationComponent";
+import Loader from "./Loader";
+import axios from "axios";
 
 const SideMenu = () => {
   const [toggleNav, setToggleNav] = useState(false);
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [loading, setLoading] = useState(false); // New state for loading
+  const navigate = useNavigate();
 
   const handleClick = () => {
     setToggleMenu(!toggleMenu);
+  };
+
+  const handleNavLinkClick = () => {
+    setToggleMenu(false); // Close the menu when NavLink is clicked
+  };
+
+  const handleInputChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const handleSearch = () => {
+    if (!searchQuery.trim()) {
+      setErrorMessage("Please, fill the search field");
+      return;
+    }
+
+    // Show the loader
+    setLoading(true);
+
+    // Make the API request using Axios
+    axios
+      .get(
+        `https://shipnowexpress.onrender.com/api/trackings/tracking/${searchQuery}`
+      )
+      .then((response) => {
+        // Navigate to the search results page with the fetched data
+        navigate(`/search-results`, { state: { results: response.data } });
+        setToggleMenu(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      })
+      .finally(() => {
+        // Hide the loader after the API request is completed
+        setLoading(false);
+      });
   };
 
   return (
@@ -24,7 +65,7 @@ const SideMenu = () => {
         <h1 className="font-extrabold text-md xs:text-xl text-black">
           shipNow
         </h1>
-        <p className="text-[#D21502] font-bold text-xs xs:text-md">Espress</p>
+        <p className="text-[#D21502] font-bold text-xs xs:text-md">Express</p>
       </Link>
       <div>
         <BiSolidLockAlt
@@ -44,13 +85,53 @@ const SideMenu = () => {
             <div className="flex flex-col items-start pt-16 px-4 text-2xl w-full">
               <div className="w-full">
                 <Accordion title="Track">
-                  <div className="border border-black p-2">
-                    <TrackingPage />
+                  <div className="border border-black">
+                    <div className="bg-white  w-full">
+                      <div className=" w-full p-3">
+                        <section>
+                          <h1 className="text-xl sm:text-2xl md:text-4xl font-semibold text-black whitespace-nowrap">
+                            Track Your Shipment
+                          </h1>
+                          <div className="flex flex-col md:flex-row gap-1 items-center justify-start md:justify-center w-full">
+                            <input
+                              type="text"
+                              value={searchQuery}
+                              onChange={handleInputChange}
+                              className="w-full md:w-3/4 text-bold text-sm py-3 focus:outline-none px-3 placeholder-gray-500"
+                              placeholder="enter your tracking details"
+                            />
+                            <button
+                              className="bg-[#D21502] text-white py-3 lg:px-16 w-full md:w-1/4"
+                              onClick={handleSearch}
+                            >
+                              Track
+                            </button>
+                          </div>
+                          {errorMessage && (
+                            <p className="text-red-500 text-sm md:text-xl font-semibold">
+                              {errorMessage}
+                            </p>
+                          )}
+                          {loading && (
+                            <div className="text-center mt-4">
+                              {/* Replace this with your loader or spinner */}
+                              <div className="text-white">
+                                <Loader />
+                              </div>
+                            </div>
+                          )}
+                        </section>
+                      </div>
+                    </div>
                   </div>
                 </Accordion>
                 <Accordion title="Ship">
                   <div>
-                    <div className="flex flex-row items-center border-b w-full justify-between shadow-sm pb-6">
+                    <Link
+                      to="/create"
+                      onClick={handleNavLinkClick}
+                      className="flex flex-row items-center border-b w-full justify-between shadow-sm pb-6"
+                    >
                       <span className="text-lg font-bold ">Get Quote</span>
                       <span>
                         <svg
@@ -68,8 +149,12 @@ const SideMenu = () => {
                           />
                         </svg>
                       </span>
-                    </div>
-                    <div className="flex flex-row items-center justify-between pt-6">
+                    </Link>
+                    <Link
+                      to="/create"
+                      className="flex flex-row items-center justify-between pt-6"
+                      onClick={handleNavLinkClick}
+                    >
                       <span className="text-lg font-bold ">Ship</span>
                       <span>
                         <svg
@@ -87,10 +172,13 @@ const SideMenu = () => {
                           />
                         </svg>
                       </span>
-                    </div>
+                    </Link>
                   </div>
                 </Accordion>
-                <h1 className="text-lg font-extrabold text-[#D21502] pl-4 py-3 border-b shadow-md">
+                <h1
+                  onClick={handleNavLinkClick}
+                  className="text-lg font-extrabold text-[#D21502] pl-4 py-3 border-b shadow-md"
+                >
                   Customer Service
                 </h1>
                 <Accordion title="Customer Panel">
@@ -101,6 +189,7 @@ const SideMenu = () => {
                     <Menu
                       handleClick={handleClick}
                       setToggleNav={setToggleNav}
+                      handleNavLinkClick={handleNavLinkClick}
                     />
                   </div>
                 </Accordion>
@@ -116,7 +205,7 @@ const SideMenu = () => {
   );
 };
 
-function Menu({ handleClick, setToggleNav }) {
+function Menu({ handleClick, setToggleNav, handleNavLinkClick }) {
   const { user } = useSelector((state) => state.user);
 
   const handleSignOut = async () => {
@@ -147,7 +236,11 @@ function Menu({ handleClick, setToggleNav }) {
             Sign Out
           </button>
         ) : (
-          <NavLink to="/login" className=" flex flex-col items-start w-full ">
+          <NavLink
+            to="/login"
+            onClick={handleNavLinkClick}
+            className=" flex flex-col items-start w-full "
+          >
             <div className="flex flex-row items-center border-b w-full justify-between shadow-sm pb-6">
               <span className="text-lg font-bold ">Register</span>
               <span>
