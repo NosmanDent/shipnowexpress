@@ -8,9 +8,6 @@ const {
 
 const router = express.Router();
 
-// Define base path for all routes under /api/trackings
-router.use("/api/trackings", router);
-
 // POST a new Tracking
 router.post("/", createTracking);
 

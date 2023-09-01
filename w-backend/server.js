@@ -18,9 +18,7 @@ app.use((req, res, next) => {
 app.use("/api/trackings", trackingRoutes);
 
 mongoose
-  .connect(
-    `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@trackingid.tpsl66v.mongodb.net/${process.env.MONGO_DATABASE}`
-  )
+  .connect(process.env.MONGO_URI)
 
   .then(() => {
     console.log("connected to database");
