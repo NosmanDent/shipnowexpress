@@ -51,10 +51,10 @@ const TrackingPage = () => {
           placeholder="enter your tracking details"
         />
         <button
-          className="bg-[#D21502] text-white py-3 lg:px-16 w-full md:w-1/4"
+          className="bg-[#D21502] text-white py-3 lg:px-16 w-full md:w-1/4 font-extrabold"
           onClick={handleSearch}
         >
-          Search
+          Track
         </button>
       </div>
       {errorMessage && (

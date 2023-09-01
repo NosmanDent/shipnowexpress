@@ -7,6 +7,7 @@ import axios from "axios";
 import Loader from "./Loader";
 import SideMenu from "./SideMenu";
 import LocationComponent from "./LocationComponent";
+import navlogo from "../assets/navlogo.png";
 
 const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -72,10 +73,10 @@ const Navbar = () => {
         <div className="hidden md:flex flex-row items-center justify-between">
           <NavLink
             to="/"
-            className="flex flex-col items-end tracking-tighter leading-tight"
+            className="flex flex-row items-center tracking-tighter leading-tight w-14 h-14"
           >
-            <h1 className="font-extrabold text-2xl text-black">shipNow</h1>
-            <p className="text-[#D21502] font-bold text-md">Espress</p>
+            <img src={navlogo} alt="" />
+            <h1 className="text-2xl navlogo">nowExpress</h1>
           </NavLink>
           <div>
             <div className="flex flex-row items-center gap-4 ">
