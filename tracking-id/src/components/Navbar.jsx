@@ -289,7 +289,7 @@ const Navbar = () => {
           <SideMenu />
         </section>
       </section>
-      <section className="bg-white w-full py-4 md:px-12 md:flex flex-row items-center justify-end hidden">
+      <section className="bg-white shadow-md w-full py-4 md:px-12 md:flex flex-row items-center justify-end hidden">
         <Menu handleClick={handleClick} setToggleNav={setToggleNav} />
         <LocationComponent />
       </section>

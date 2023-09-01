@@ -39,10 +39,10 @@ const TrackingDetails = () => {
             Track Record
           </h2>
           <div className="bg-stone-400 flex flex-col  pb-16 pt-10">
-            <div className="border border-black p-2 mx-8 md:mx-12">
+            <div className="bg-white p-2 mx-8 md:mx-12">
               <TrackingPage />
             </div>
-            <div className="mt-8 md:mt-10 border-b-2 border-black flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between bg-white mx-8 md:mx-12 h-full ">
+            <div className="mt-8 md:mt-10 bg-white flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between  mx-8 md:mx-12 h-full ">
               <div className="p-5 text-center md:text-start">
                 <p>Tracking Code: {selectedTracking.trackingNumber}</p>
                 <p>
