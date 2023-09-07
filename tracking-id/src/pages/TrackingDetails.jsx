@@ -78,10 +78,28 @@ const TrackingDetails = () => {
                 </p>
 
                 <div>
-                  <p className="font-bold text-sm xs:text-md md:text-xl">
+                  <p className="font-bold text-sm xs:text-md md:text-xl text-center">
                     Origin Service Area :{" "}
                     <span>{selectedTracking.from.country}</span> -{" "}
                     <span>{selectedTracking.to.country}</span>
+                  </p>
+                </div>
+
+                <div>
+                  <p className="font-bold text-xs xs:text-sm md:text-md text-center">
+                    Sender and Receiver name :{" "}
+                    <span>{selectedTracking.from.name}</span> -{" "}
+                    <span>{selectedTracking.to.name}</span>
+                  </p>
+                </div>
+                <div>
+                  <p className="text-xs xs:text-sm md:text-md text-center text-red-600 font-bold">
+                    Receiver Address :{" "}
+                    <span>{selectedTracking.to.addressOne}, </span>
+                    <span>{selectedTracking.to.city}, </span>
+                    <span>{selectedTracking.to.state}</span>
+                    <span>{selectedTracking.to.country}, </span>
+                    <span>{selectedTracking.to.countryPostCode}</span>
                   </p>
                 </div>
                 <section className="flex flex-col  w-full">
