@@ -10,6 +10,7 @@ const TrackingDetails = () => {
   const [selectedTracking, setSelectedTracking] = useState(null);
   const stages = [
     { name: "Processing" },
+    { name: "Your Package is on Hold" },
     { name: "Out for Delivery" },
     { name: "Arrived at Local Store" },
     { name: "Out to be Delivered" },
