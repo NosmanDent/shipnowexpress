@@ -68,7 +68,6 @@ const TrackingDetails = () => {
                   />
                 </svg>
               </div>
-              {/* Render other tracking details as needed */}
             </div>
             <div className=" border-b-2 border-black bg-white mx-8 md:mx-12 h-full ">
               <div className="p-5 flex flex-col  items-center md:items-start justify-center md:justify-start ">
@@ -176,7 +175,7 @@ const TrackingDetails = () => {
           </div>
         </div>
       ) : (
-        <p>No tracking details found.</p>
+        <p>No tracking details found..</p>
       )}
     </div>
   );
