@@ -175,7 +175,9 @@ const TrackingDetails = () => {
           </div>
         </div>
       ) : (
-        <p>No tracking details found...</p>
+        <p>
+          No tracking details found. Please enter the correct tracking details
+        </p>
       )}
     </div>
   );
