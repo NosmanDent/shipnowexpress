@@ -175,7 +175,7 @@ const TrackingDetails = () => {
           </div>
         </div>
       ) : (
-        <p>No details found...</p>
+        <p>No tracking details found...</p>
       )}
     </div>
   );
