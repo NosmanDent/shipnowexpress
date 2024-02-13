@@ -65,7 +65,7 @@ const SideMenu = () => {
         <h1 className="font-extrabold text-md xs:text-xl text-black">
           shipNow
         </h1>
-        <p className="text-[#D21502] font-bold text-xs xs:text-md">Express</p>
+        <p className="text-[#D21502] font-bold text-xs xs:text-md">Expresso</p>
       </Link>
       <div>
         <BiSolidLockAlt

@@ -76,7 +76,7 @@ const Navbar = () => {
             className="flex flex-row items-center tracking-tighter leading-tight w-14 h-14"
           >
             <img src={navlogo} alt="" />
-            <h1 className="text-2xl navlogo">nowExpress</h1>
+            <h1 className="text-2xl navlogo">nowExpresso</h1>
           </NavLink>
           <div>
             <div className="flex flex-row items-center gap-4 ">
