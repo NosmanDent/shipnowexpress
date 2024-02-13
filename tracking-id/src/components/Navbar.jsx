@@ -12,7 +12,7 @@ import navlogo from "../assets/navlogo.png";
 const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const [loading, setLoading] = useState(false); // New state for loading
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isDropdownOpenShip, setIsDropdownOpenShip] = useState(false);
