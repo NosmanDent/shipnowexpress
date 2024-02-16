@@ -6,7 +6,7 @@ import Loader from "./Loader";
 const TrackingPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const [loading, setLoading] = useState(false); // New state for loading
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleInputChange = (event) => {
@@ -64,7 +64,6 @@ const TrackingPage = () => {
       )}
       {loading && (
         <div className="text-center mt-4">
-          {/* Replace this with your loader or spinner */}
           <div className="text-white">
             <Loader />
           </div>
