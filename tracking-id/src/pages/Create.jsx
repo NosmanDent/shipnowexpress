@@ -194,7 +194,7 @@ const CreateTracking = () => {
         console.error("Error creating tracking entry:", error);
         setLoading(false); // Reset loading state in case of error
       }
-    }, 3000); // Delay of 20 seconds
+    }, 3000); // Delay of 30 seconds
   };
 
   const closeModal = () => {
