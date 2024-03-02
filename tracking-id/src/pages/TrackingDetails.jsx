@@ -47,7 +47,7 @@ const TrackingDetails = () => {
                 <p>Tracking Code: {selectedTracking.trackingNumber}</p>
                 <p>
                   This shipment is handled by:{" "}
-                  <span className="font-extrabold">ShipNow</span>
+                  <span className="font-extrabold">ShipNow Expresso</span>
                 </p>
               </div>
 
