@@ -7,10 +7,11 @@ import GreenShip from "../components/GreenShip";
 const Home = () => {
   return (
     <div className="flex flex-col gap-10">
-      <Hero />
+      {/* <Hero />
       <DocumentParcel />
       <Cargo />
-      <GreenShip />
+      <GreenShip /> */}
+      <h1>Maintainance ongoing</h1>
     </div>
   );
 };
