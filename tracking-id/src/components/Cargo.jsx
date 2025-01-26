@@ -99,14 +99,14 @@ const DocumentParcel = () => {
                     d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
                   />
                 </svg>
-                <h1 className="text-xs md:text-sm">Rail Freight</h1>
+                <h1 className="text-xs md:text-sm">Rail Freight...</h1>
               </div>
             </div>
           </div>
         </div>
 
         <button className="bg-[#D21502] py-3 md:py-4 rounded-md hidden md:flex items-center justify-center mx-6 lg:mx-8 xl:mx-12 mt-4 font-extrabold text-white">
-          Explore ShipNow Express
+          Explore ShipNow Expresso
         </button>
       </div>
       <button className="bg-[#D21502] py-3 md:py-4 rounded-md flex md:hidden items-center justify-center mx-6 lg:mx-8 xl:mx-12 mt-4 font-extrabold text-white">
