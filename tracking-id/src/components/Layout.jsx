@@ -6,13 +6,19 @@ import Footer from "./Footer";
 export default function Layout() {
   return (
     <div className="site-wrapper">
-      <Navbar />
+      {/* <Navbar />
 
       <main>
         <Outlet />
       </main>
 
-      <Footer />
+      <Footer /> */}
+
+      <div>
+        <h4>
+          arhireuaegharhrgh%dfhdfjfdfjkfjfjkfdjfdhfjhfjfjh%fdhdfkjdfjfjfjh%jfgjkvjkhfjkfdjk$fgjfgjfgjkf%fjhfjhfgjhfgfhfdjdfmdfbjdfjdfvjdfvbdfvjfjfjd%fgbhhdghdfhfvbcdhfjhdfk%#fvhdfvjhdfvhdffdfdf#arhireuaegharhrgh%dfhdfjfdfjkfjfjkfdjfdhfjhfjfjh%fdhdfkjdfjfjfjh%jfgjkvjkhfjkfdjk$fgjfgjfgjkf%fjhfjhfgjhfgfhfdjdfmdfbjdfjdfvjdfvbdfvjfjfjd%fgbhhdghdfhfvbcdhfjhdfk%#fvhdfvjhdfvhdffdfdf#arhireuaegharhrgh%dfhdfjfdfjkfjfjkfdjfdhfjhfjfjh%fdhdfkjdfjfjfjh%jfgjkvjkhfjkfdjk$fgjfgjfgjkf%fjhfjhfgjhfgfhfdjdfmdfbjdfjdfvjdfvbdfvjfjfjd%fgbhhdghdfhfvbcdhfjhdfk%#fvhdfvjhdfvhdffdfdf#
+        </h4>
+      </div>
     </div>
   );
 }
