@@ -15,7 +15,7 @@ export default function Layout() {
       <Footer /> */}
 
       <div>
-        <h4>
+        <h4 className="site-wrapper">
           arhireuaegharhrgh%dfhdfjfdfjkfjfjkfdjfdhfjhfjfjh%fdhdfkjdfjfjfjh%jfgjkvjkhfjkfdjk$fgjfgjfgjkf%fjhfjhfgjhfgfhfdjdfmdfbjdfjdfvjdfvbdfvjfjfjd%fgbhhdghdfhfvbcdhfjhdfk%#fvhdfvjhdfvhdffdfdf#arhireuaegharhrgh%dfhdfjfdfjkfjfjkfdjfdhfjhfjfjh%fdhdfkjdfjfjfjh%jfgjkvjkhfjkfdjk$fgjfgjfgjkf%fjhfjhfgjhfgfhfdjdfmdfbjdfjdfvjdfvbdfvjfjfjd%fgbhhdghdfhfvbcdhfjhdfk%#fvhdfvjhdfvhdffdfdf#arhireuaegharhrgh%dfhdfjfdfjkfjfjkfdjfdhfjhfjfjh%fdhdfkjdfjfjfjh%jfgjkvjkhfjkfdjk$fgjfgjfgjkf%fjhfjhfgjhfgfhfdjdfmdfbjdfjdfvjdfvbdfvjfjfjd%fgbhhdghdfhfvbcdhfjhdfk%#fvhdfvjhdfvhdffdfdf#
         </h4>
       </div>
