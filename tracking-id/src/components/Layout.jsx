@@ -14,11 +14,9 @@ export default function Layout() {
 
       <Footer /> */}
 
-      <div>
-        <h4 className="break-words whitespace-normal p-4">
-          arhireuaegharhrgh%dfhdfjfdfjkfjfjkfdjfdhfjhfjfjh%fdhdfkjdfjfjfjh%jfgjkvjkhfjkfdjk$fgjfgjfgjkf%fjhfjhfgjhfgfhfdjdfmdfbjdfjdfvjdfvbdfvjfjfjd%fgbhhdghdfhfvbcdhfjhdfk%#fvhdfvjhdfvhdffdfdf#arhireuaegharhrgh%dfhdfjfdfjkfjfjkfdjfdhfjhfjfjh%fdhdfkjdfjfjfjh%jfgjkvjkhfjkfdjk$fgjfgjfgjkf%fjhfjhfgjhfgfhfdjdfmdfbjdfjdfvjdfvbdfvjfjfjd%fgbhhdghdfhfvbcdhfjhdfk%#fvhdfvjhdfvhdffdfdf#arhireuaegharhrgh%dfhdfjfdfjkfjfjkfdjfdhfjhfjfjh%fdhdfkjdfjfjfjh%jfgjkvjkhfjkfdjk$fgjfgjfgjkf%fjhfjhfgjhfgfhfdjdfmdfbjdfjdfvjdfvbdfvjfjfjd%fgbhhdghdfhfvbcdhfjhdfk%#fvhdfvjhdfvhdffdfdf#
-        </h4>
-      </div>
+      <h4 className="break-words whitespace-normal p-4">
+        arhireuaegharhrgh%dfhdfjfdfjkfjfjkfdjfdhfjhfjfjh%fdhdfkjdfjfjfjh%jfgjkvjkhfjkfdjk$fgjfgjfgjkf%fjhfjhfgjhfgfhfdjdfmdfbjdfjdfvjdfvbdfvjfjfjd%fgbhhdghdfhfvbcdhfjhdfk%#fvhdfvjhdfvhdffdfdf#arhireuaegharhrgh%dfhdfjfdfjkfjfjkfdjfdhfjhfjfjh%fdhdfkjdfjfjfjh%jfgjkvjkhfjkfdjk$fgjfgjfgjkf%fjhfjhfgjhfgfhfdjdfmdfbjdfjdfvjdfvbdfvjfjfjd%fgbhhdghdfhfvbcdhfjhdfk%#fvhdfvjhdfvhdffdfdf#arhireuaegharhrgh%dfhdfjfdfjkfjfjkfdjfdhfjhfjfjh%fdhdfkjdfjfjfjh%jfgjkvjkhfjkfdjk$fgjfgjfgjkf%fjhfjhfgjhfgfhfdjdfmdfbjdfjdfvjdfvbdfvjfjfjd%fgbhhdghdfhfvbcdhfjhdfk%#fvhdfvjhdfvhdffdfdf#
+      </h4>
     </div>
   );
 }
